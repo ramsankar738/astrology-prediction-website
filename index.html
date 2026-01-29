@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Astrology Prediction Portal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="card">
+      <h1>Astrology Prediction Portal</h1>
+      <p class="subtitle">
+        Share your birth details and focus area to receive a personalized, AI‑powered astrological insight via email.
+      </p>
+
+      <form id="astro-form" novalidate>
+        <!-- Full Name -->
+        <div class="form-group">
+          <label for="fullName">Full name<span class="required">*</span></label>
+          <input
+            type="text"
+            id="fullName"
+            name="fullName"
+            placeholder="E.g., Arjun Mehta"
+            required
+          />
+          <small class="error-message" data-error-for="fullName"></small>
+        </div>
+
+        <!-- Date of Birth -->
+        <div class="form-group">
+          <label for="dob">Date of birth<span class="required">*</span></label>
+          <input
+            type="date"
+            id="dob"
+            name="dob"
+            required
+          />
+          <small class="error-message" data-error-for="dob"></small>
+        </div>
+
+        <!-- Time of Birth (optional) -->
+        <div class="form-group">
+          <label for="tob">
+            Time of birth <span class="optional">(optional)</span>
+          </label>
+          <input
+            type="time"
+            id="tob"
+            name="tob"
+          />
+          <small class="error-message" data-error-for="tob"></small>
+        </div>
+
+        <!-- Place of Birth -->
+        <div class="form-group">
+          <label for="pob">Place of birth<span class="required">*</span></label>
+          <input
+            type="text"
+            id="pob"
+            name="pob"
+            placeholder="City, Country"
+            required
+          />
+          <small class="error-message" data-error-for="pob"></small>
+        </div>
+
+        <!-- Gender (optional) -->
+        <div class="form-group">
+          <label for="gender">
+            Gender <span class="optional">(optional)</span>
+          </label>
+          <select id="gender" name="gender">
+            <option value="">Prefer not to say</option>
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+            <option value="nonbinary">Non‑binary</option>
+            <option value="other">Other</option>
+          </select>
+          <small class="error-message" data-error-for="gender"></small>
+        </div>
+
+        <!-- Area of Focus -->
+        <div class="form-group">
+          <label for="focus">Area of focus<span class="required">*</span></label>
+          <select id="focus" name="focus" required>
+            <option value="">Select an area</option>
+            <option value="career">Career</option>
+            <option value="health">Health</option>
+            <option value="relationships">Relationships</option>
+            <option value="finance">Finance</option>
+            <option value="personal-growth">Personal Growth</option>
+            <option value="general">General life direction</option>
+          </select>
+          <small class="error-message" data-error-for="focus"></small>
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+          <label for="email">Email address<span class="required">*</span></label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="you@example.com"
+            required
+          />
+          <small class="error-message" data-error-for="email"></small>
+        </div>
+
+        <!-- Additional Notes (optional) -->
+        <div class="form-group">
+          <label for="notes">
+            Additional details / question to the astrologer <span class="optional">(optional)</span>
+          </label>
+          <textarea
+            id="notes"
+            name="notes"
+            rows="3"
+            placeholder="E.g., ‘I’m considering changing jobs in the next 6 months.’"
+          ></textarea>
+          <small class="error-message" data-error-for="notes"></small>
+        </div>
+
+        <!-- Form-level messages -->
+        <div id="form-messages" class="form-messages" aria-live="polite"></div>
+
+        <button type="submit" class="btn-primary">Get My AI Prediction</button>
+
+        <p class="disclaimer">
+          By submitting, you agree to receive an email with your personalized horoscope.
+          This is an experimental AI‑assisted astrology tool and should not replace professional
+          medical, legal, or financial advice.
+        </p>
+      </form>
+
+      <section id="preview-section" class="preview hidden">
+        <h2>Your Preview Prediction</h2>
+        <p class="preview-text" id="preview-text">
+          Complete the form to see a sample of the style of prediction our AI will send you.
+        </p>
+      </section>
+    </section>
+
+    <footer class="footer">
+      Built with HTML, CSS &amp; JavaScript, guided by Cursor AI.
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
