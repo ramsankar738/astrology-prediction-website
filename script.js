@@ -24,8 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // ⭐ SEND DATA TO n8n WEBHOOK
     try {
-      const webhookUrl = "https://yourname.n8n.cloud/webhook/astro-form"; // <-- Replace this
-
+      const webhookUrl = "https://ramsankar.app.n8n.cloud/webhook/astro-form"; // <-- Replace this
       const response = await fetch(webhookUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -174,3 +173,4 @@ Remember, astrology offers symbolic guidance — it works best when you stay con
     }
   }
 });
+
